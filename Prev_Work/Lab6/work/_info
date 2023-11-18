@@ -1,0 +1,90 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/HP/OneDrive/Escritorio/Diego/UofT/3rd_Semester/ECE-241_Digital_Systems/Labs/Lab6
+vcontrol
+Z1 !s110 1698775659
+!i10b 1
+!s100 mDlm9FGELm0@kVR1o?8Cc3
+ITeVk3`VgSm:>SFCDhH`Fm3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1698767935
+Z4 8part2.v
+Z5 Fpart2.v
+L0 64
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1698775659.000000
+Z8 !s107 part2.v|
+Z9 !s90 -reportprogress|300|part2.v|
+!i113 1
+Z10 tCvgOpt 0
+vdatapath
+R1
+!i10b 1
+!s100 TYl]j2ijim_?2ggBlMce?0
+I<49cSB8K7hdR9RR`4@o>D0
+R2
+R0
+R3
+R4
+R5
+L0 221
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vpart1
+!s110 1698775272
+!i10b 1
+!s100 OEX<eJ;c1OkhY2^DXNQo22
+IgCiU4`3NifU9HSK;MQ>g60
+R2
+R0
+w1698708328
+8part1.v
+Fpart1.v
+L0 9
+R6
+r1
+!s85 0
+31
+!s108 1698775272.000000
+!s107 part1.v|
+!s90 -reportprogress|300|part1.v|
+!i113 1
+R10
+vpart2
+R1
+!i10b 1
+!s100 AWQ;DS<mo<NYQ=Ge54SKV0
+IC9jhb]MXlCeRBM5IgOQU43
+R2
+R0
+R3
+R4
+R5
+L0 9
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10

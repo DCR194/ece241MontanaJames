@@ -1,0 +1,92 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/HP/OneDrive/Escritorio/Diego/UofT/3rd_Semester/ECE-241_Digital_Systems/Labs/Lab4
+vALU
+Z1 !s110 1697570882
+!i10b 1
+!s100 DMoG4[h<KXPiGPJdbY:Pe0
+IWn]n:;o>3^n[6I3<:5?YC3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1697504170
+Z4 8part2.v
+Z5 Fpart2.v
+L0 35
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1697570881.000000
+Z8 !s107 part2.v|
+Z9 !s90 -reportprogress|300|part2.v|
+!i113 1
+Z10 tCvgOpt 0
+n@a@l@u
+vD_flip_flop
+R1
+!i10b 1
+!s100 eFBabFzFl>Ka1z19Vggz33
+I7aSZdCAE[4GoiWMoL3GgY0
+R2
+R0
+R3
+R4
+R5
+L0 21
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+n@d_flip_flop
+vpart2
+R1
+!i10b 1
+!s100 c8<l^bQN;KX_1ic80k9PI0
+I7Og6JTmJ`X<ad>nB8j?@B1
+R2
+R0
+R3
+R4
+R5
+L0 3
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vpart3
+!s110 1697564177
+!i10b 1
+!s100 j2]GbQGQVWb7FEn8Z3WST2
+I500VkDFB1eC;[g_QcTePC2
+R2
+R0
+w1697564161
+8part3.v
+Fpart3.v
+L0 3
+R6
+r1
+!s85 0
+31
+!s108 1697564177.000000
+!s107 part3.v|
+!s90 -reportprogress|300|part3.v|
+!i113 1
+R10

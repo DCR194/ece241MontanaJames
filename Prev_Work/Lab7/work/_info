@@ -1,0 +1,130 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/HP/OneDrive/Escritorio/Diego/UofT/3rd_Semester/ECE-241_Digital_Systems/Labs/Lab7
+vblackout
+Z1 !s110 1699980405
+!i10b 1
+!s100 ^8IDBH6H_Loi81h^TANT=1
+IHZ`E0l]n:1:mN]PaSQ7iB2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/HP/OneDrive/Escritorio/Diego/UofT/3rd_Semester/ECE-241_Digital_Systems/Labs/lab7
+Z4 w1699980396
+Z5 8part2.v
+Z6 Fpart2.v
+L0 235
+Z7 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z8 !s108 1699980404.000000
+Z9 !s107 part2.v|
+Z10 !s90 -reportprogress|300|part2.v|
+!i113 1
+Z11 tCvgOpt 0
+vcontrol
+R1
+!i10b 1
+!s100 Dg;39zIW>4R>=2>n]3<CZ2
+IK>GjGmGQngoXeeRga09V<3
+R2
+R3
+R4
+R5
+R6
+L0 30
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+vcounter16
+R1
+!i10b 1
+!s100 P8Hli>zFz4R=;^;D7DN=k0
+IMWVGI9iCnE?4FMTVXUVZ@1
+R2
+R3
+R4
+R5
+R6
+L0 170
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+vdatapath
+R1
+!i10b 1
+!s100 k509c`IOf^`48j?Mh4=DF2
+I;_Ba1PFN@<cPRXmPfWDdM3
+R2
+R3
+R4
+R5
+R6
+L0 116
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+vpart1
+!s110 1699631863
+!i10b 1
+!s100 6D`PIH4dl]Wo[gDT5G;Va2
+I_^h07jY5UQ:nViko]>8M<0
+R2
+R0
+w1699631803
+8part1.v
+Fpart1.v
+L0 39
+R7
+r1
+!s85 0
+31
+!s108 1699631862.000000
+!s107 part1.v|
+!s90 -reportprogress|300|part1.v|
+!i113 1
+R11
+vpart2
+R1
+!i10b 1
+!s100 Kh^h?bEgO4TKSTNk:01E>2
+IdVIU9Sg9F^lTKJD^6_aB_2
+R2
+R3
+R4
+R5
+R6
+L0 8
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11

@@ -1,0 +1,132 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/HP/OneDrive/Escritorio/Diego/UofT/3rd_Semester/ECE-241_Digital_Systems/Labs/Lab3
+vfullAdder
+Z1 !s110 1696354509
+!i10b 1
+!s100 X^3QMB2HE7Tdg4f6ENnWN0
+I1Y7[=JnXd;kIF3M:Hkofo3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/HP/OneDrive/Escritorio/Diego/UofT/3rd_Semester/ECE-241_Digital_Systems/Labs/lab3
+Z4 w1696354485
+Z5 8part1.v
+Z6 Fpart1.v
+L0 18
+Z7 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z8 !s108 1696354509.000000
+Z9 !s107 part1.v|
+Z10 !s90 -reportprogress|300|part1.v|
+!i113 1
+Z11 tCvgOpt 0
+nfull@adder
+vmux2to1
+R1
+!i10b 1
+!s100 1k:>cKShB4bgV2]fJf[?d3
+IBKj]a813mBj;:4kge;7Kg1
+R2
+R3
+R4
+R5
+R6
+Z12 L0 29
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+vpart1
+R1
+!i10b 1
+!s100 T5[kdd6M1GVG611_[BI=:3
+IVoF`F6OZJQez;lR8]fY?k2
+R2
+R3
+R4
+R5
+R6
+L0 3
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+vpart2
+!s110 1696294075
+!i10b 1
+!s100 <JiIi1<jP1NW`eGH^97B32
+IVz[SZ5O^L[m306e?ImA]P0
+R2
+R0
+w1696293375
+Z13 8part2.v
+Z14 Fpart2.v
+L0 3
+R7
+r1
+!s85 0
+31
+!s108 1696294075.000000
+Z15 !s107 part2.v|
+Z16 !s90 -reportprogress|300|part2.v|
+!i113 1
+R11
+vpart3
+!s110 1696541212
+!i10b 1
+!s100 GZ]DiU7FhQiFHC0b]o<dZ2
+IS<DnU4>K`o6OPfm;N`XHN3
+R2
+R0
+w1696541206
+8part3.v
+Fpart3.v
+L0 3
+R7
+r1
+!s85 0
+31
+!s108 1696541212.000000
+!s107 part3.v|
+!s90 -reportprogress|300|part3.v|
+!i113 1
+R11
+vrippleCarryAdder
+!s110 1696288764
+!i10b 1
+!s100 Rh=9G9X:0zle4_YXFc69B2
+IVA9aobSL>@<d0d3k5QhbL0
+R2
+R0
+w1696288747
+R13
+R14
+R12
+R7
+r1
+!s85 0
+31
+!s108 1696288764.000000
+R15
+R16
+!i113 1
+R11
+nripple@carry@adder
