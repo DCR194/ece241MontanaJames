@@ -1,9 +1,12 @@
+// Part 2 skeleton
 
 module fill
 	(
 		CLOCK_50,						//	On Board 50 MHz
 		// Your inputs and outputs here
-		KEY, SW, HEX0, HEX1, HEX2,					// On Board Keys
+		KEY,							// On Board Keys
+		SW,
+		LEDR,
 		// The ports below are for the VGA output.  Do not change.
 		VGA_CLK,   						//	VGA Clock
 		VGA_HS,							//	VGA H_SYNC
@@ -16,12 +19,10 @@ module fill
 	);
 
 	input			CLOCK_50;				//	50 MHz
-	input	[3:0]	KEY;
+	input	[3:0]	KEY;					
 	// Declare your inputs and outputs here
 	input [9:0] SW;
-	output [6:0]HEX0;
-	output [6:0]HEX1;
-	output [6:0]HEX2;
+	output [9:0] LEDR;
 	// Do not change the following outputs
 	output			VGA_CLK;   				//	VGA Clock
 	output			VGA_HS;					//	VGA H_SYNC
@@ -67,16 +68,9 @@ module fill
 		defparam VGA.BACKGROUND_IMAGE = "black.mif";
 			
 	// Put your code here. Your code should produce signals x,y,colour and writeEn
-	
-	hex_decoder julie1(y, HEX0);
-	hex_decoder julie2(x, HEX1);
-	hex_decoder julie3(colour, HEX2);
-	part2 johnCena(.iResetn(KEY[0]), .iPlotBox(~KEY[1]), .iBlack(~KEY[2]), .iColour(SW[9:7]), 
-					.iLoadX(~KEY[3]), .iXY_Coord(SW[6:0]), .iClock(CLOCK_50), .oX(x), .oY(y), 
-					.oColour(colour), .oPlot(writeEn));
-	controlCharacter contr(.iResetn(KEY[0]), .iClock(CLOCK_50), .iForwardX(SW[0]), .iBackX(SW[1]), 
-					.iForwardY(SW[8]), .iBackY(SW[9]), 
-					.oX(x), oY(y), oColour(colour), oPlot(writeEn));
+	assign LEDR = SW;
+	controlCharacter poop(.iResetn(KEY[0]), .iClock(CLOCK_50), .oX(x), 
+	.oY(y), .oColour(colour), .oPlot(writeEn), .switches(SW));
 	// for the VGA controller, in addition to any other functionality your design may require.
 	
 	

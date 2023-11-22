@@ -2,7 +2,7 @@
 module animate(iResetn,
 iClock,
 iForwardX,
-iBackX
+iBackX,
 iForwardY,
 iBackY,
 oX,
@@ -24,7 +24,7 @@ oDone);
 
    //
    // Your code goes here // WRITE CONTROL PATH
-   control ();
+   controlCharacter contr(iResetn, iClock, iForwardX, iBackX, iForwardY, iBackY, oX, oY, oColour, oPlot, oDone);
    //
 
 endmodule // part2

@@ -15,7 +15,7 @@
 //       Default is 160 x 120, which is size for fake_fpga and baseline for the DE1_SoC vga controller
 // CLOCKS_PER_SECOND should be the frequency of the clock being used.
 
-module part1(iColour,iResetn,iClock,oX,oY,oColour,oPlot,oNewFrame);
+module part1(iColour, iResetn, iClock, oX, oY, oColour, oPlot, oNewFrame);
    input wire [2:0] iColour;
    input wire 	    iResetn;
    input wire 	    iClock;
