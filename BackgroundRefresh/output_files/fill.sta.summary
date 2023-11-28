@@ -1,0 +1,309 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'screen:poop|controlRam:man|currentState.WAITFRAME'
+Slack : -4.735
+TNS   : -7.784
+
+Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -4.240
+TNS   : -219.569
+
+Type  : Slow 1100mV 85C Model Setup 'screen:poop|controlRam:man|currentState.STARTCLEAR'
+Slack : -3.820
+TNS   : -3.820
+
+Type  : Slow 1100mV 85C Model Setup 'screen:poop|controlRam:man|currentState.CLEAR'
+Slack : -3.112
+TNS   : -3.112
+
+Type  : Slow 1100mV 85C Model Setup 'screen:poop|halfSecond:marcus2|RateDividerCount[0]'
+Slack : -1.552
+TNS   : -20.661
+
+Type  : Slow 1100mV 85C Model Setup 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 32.269
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.346
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.390
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'screen:poop|halfSecond:marcus2|RateDividerCount[0]'
+Slack : 0.508
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'screen:poop|controlRam:man|currentState.WAITFRAME'
+Slack : 0.750
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'screen:poop|controlRam:man|currentState.CLEAR'
+Slack : 2.218
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'screen:poop|controlRam:man|currentState.STARTCLEAR'
+Slack : 2.844
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'screen:poop|halfSecond:marcus2|RateDividerCount[0]'
+Slack : -0.394
+TNS   : -7.750
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'screen:poop|controlRam:man|currentState.WAITFRAME'
+Slack : 0.374
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'screen:poop|controlRam:man|currentState.CLEAR'
+Slack : 0.375
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'screen:poop|controlRam:man|currentState.STARTCLEAR'
+Slack : 0.444
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 8.876
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 18.778
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'screen:poop|controlRam:man|currentState.WAITFRAME'
+Slack : -4.872
+TNS   : -7.987
+
+Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -4.059
+TNS   : -199.035
+
+Type  : Slow 1100mV 0C Model Setup 'screen:poop|controlRam:man|currentState.STARTCLEAR'
+Slack : -3.876
+TNS   : -3.876
+
+Type  : Slow 1100mV 0C Model Setup 'screen:poop|controlRam:man|currentState.CLEAR'
+Slack : -3.132
+TNS   : -3.132
+
+Type  : Slow 1100mV 0C Model Setup 'screen:poop|halfSecond:marcus2|RateDividerCount[0]'
+Slack : -1.605
+TNS   : -21.576
+
+Type  : Slow 1100mV 0C Model Setup 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 32.631
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.085
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.368
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'screen:poop|halfSecond:marcus2|RateDividerCount[0]'
+Slack : 0.504
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'screen:poop|controlRam:man|currentState.WAITFRAME'
+Slack : 0.747
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'screen:poop|controlRam:man|currentState.CLEAR'
+Slack : 2.209
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'screen:poop|controlRam:man|currentState.STARTCLEAR'
+Slack : 2.857
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'screen:poop|halfSecond:marcus2|RateDividerCount[0]'
+Slack : -0.394
+TNS   : -7.936
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'screen:poop|controlRam:man|currentState.CLEAR'
+Slack : 0.343
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'screen:poop|controlRam:man|currentState.WAITFRAME'
+Slack : 0.390
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'screen:poop|controlRam:man|currentState.STARTCLEAR'
+Slack : 0.420
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 8.828
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 18.756
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -3.084
+TNS   : -158.222
+
+Type  : Fast 1100mV 85C Model Setup 'screen:poop|controlRam:man|currentState.WAITFRAME'
+Slack : -2.099
+TNS   : -3.333
+
+Type  : Fast 1100mV 85C Model Setup 'screen:poop|controlRam:man|currentState.STARTCLEAR'
+Slack : -1.870
+TNS   : -1.870
+
+Type  : Fast 1100mV 85C Model Setup 'screen:poop|controlRam:man|currentState.CLEAR'
+Slack : -1.304
+TNS   : -1.304
+
+Type  : Fast 1100mV 85C Model Setup 'screen:poop|halfSecond:marcus2|RateDividerCount[0]'
+Slack : -0.518
+TNS   : -6.098
+
+Type  : Fast 1100mV 85C Model Setup 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 34.275
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.197
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.225
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'screen:poop|halfSecond:marcus2|RateDividerCount[0]'
+Slack : 0.227
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'screen:poop|controlRam:man|currentState.WAITFRAME'
+Slack : 0.379
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'screen:poop|controlRam:man|currentState.CLEAR'
+Slack : 1.280
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'screen:poop|controlRam:man|currentState.STARTCLEAR'
+Slack : 1.817
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'screen:poop|halfSecond:marcus2|RateDividerCount[0]'
+Slack : 0.096
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'screen:poop|controlRam:man|currentState.WAITFRAME'
+Slack : 0.390
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'screen:poop|controlRam:man|currentState.STARTCLEAR'
+Slack : 0.472
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'screen:poop|controlRam:man|currentState.CLEAR'
+Slack : 0.480
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 8.808
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 18.889
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -2.565
+TNS   : -123.273
+
+Type  : Fast 1100mV 0C Model Setup 'screen:poop|controlRam:man|currentState.WAITFRAME'
+Slack : -2.010
+TNS   : -3.200
+
+Type  : Fast 1100mV 0C Model Setup 'screen:poop|controlRam:man|currentState.STARTCLEAR'
+Slack : -1.807
+TNS   : -1.807
+
+Type  : Fast 1100mV 0C Model Setup 'screen:poop|controlRam:man|currentState.CLEAR'
+Slack : -1.235
+TNS   : -1.235
+
+Type  : Fast 1100mV 0C Model Setup 'screen:poop|halfSecond:marcus2|RateDividerCount[0]'
+Slack : -0.456
+TNS   : -5.403
+
+Type  : Fast 1100mV 0C Model Setup 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 35.034
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.189
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.200
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'screen:poop|halfSecond:marcus2|RateDividerCount[0]'
+Slack : 0.204
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'screen:poop|controlRam:man|currentState.WAITFRAME'
+Slack : 0.355
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'screen:poop|controlRam:man|currentState.CLEAR'
+Slack : 1.247
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'screen:poop|controlRam:man|currentState.STARTCLEAR'
+Slack : 1.790
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'screen:poop|halfSecond:marcus2|RateDividerCount[0]'
+Slack : 0.102
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'screen:poop|controlRam:man|currentState.WAITFRAME'
+Slack : 0.407
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'screen:poop|controlRam:man|currentState.CLEAR'
+Slack : 0.472
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'screen:poop|controlRam:man|currentState.STARTCLEAR'
+Slack : 0.479
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 8.802
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 18.886
+TNS   : 0.000
+
+------------------------------------------------------------

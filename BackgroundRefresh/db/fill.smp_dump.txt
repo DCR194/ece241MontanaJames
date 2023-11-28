@@ -1,0 +1,11 @@
+
+State Machine - |fill|screen:poop|controlRam:man|currentState
+Name currentState.WAITFRAME currentState.WAITNOTFRAME currentState.READ currentState.STARTREAD currentState.CLEAR currentState.STARTCLEAR currentState.DISPLAY currentState.STARTDISPLAY 
+currentState.STARTDISPLAY 0 0 0 0 0 0 0 0 
+currentState.DISPLAY 0 0 0 0 0 0 1 1 
+currentState.STARTCLEAR 0 0 0 0 0 1 0 1 
+currentState.CLEAR 0 0 0 0 1 0 0 1 
+currentState.STARTREAD 0 0 0 1 0 0 0 1 
+currentState.READ 0 0 1 0 0 0 0 1 
+currentState.WAITNOTFRAME 0 1 0 0 0 0 0 1 
+currentState.WAITFRAME 1 0 0 0 0 0 0 1 
