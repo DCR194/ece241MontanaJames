@@ -1,0 +1,3 @@
+Warning (10268): Verilog HDL information at screen.v(81): always construct contains both blocking and non-blocking assignments File: //VSRV1/B.Homes$/ciudadre/Desktop/CharMod2/screen.v Line: 81
+Warning (10268): Verilog HDL information at screen.v(110): always construct contains both blocking and non-blocking assignments File: //VSRV1/B.Homes$/ciudadre/Desktop/CharMod2/screen.v Line: 110
+Warning (10268): Verilog HDL information at screen.v(364): always construct contains both blocking and non-blocking assignments File: //VSRV1/B.Homes$/ciudadre/Desktop/CharMod2/screen.v Line: 364
