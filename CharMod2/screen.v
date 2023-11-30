@@ -1,33 +1,7 @@
-module controlCharacter(iColour, iResetn, iClock, oX, oY, oColour, oPlot, oNewFrame, switches);
-   input wire [2:0] iColour;
-   input wire 	    iResetn;
-   input wire 	    iClock;
-   input [9:0] switches;
-   output wire [7:0] oX;         // VGA pixel coordinates
-   output wire [6:0] oY;
-
-   output wire [2:0] oColour;     // VGA pixel colour (0-7)
-   output wire 	     oPlot;       // Pixel drawn enable
-   output wire       oNewFrame;
-
-   wire frameClock, second;
-
-   RateDivider60to1 marcus(iClock, iResetn, frameClock);
-   halfSecond marcus2  (iClock, second);
-
-   character mike(.frameClock(second), .iResetn(iResetn), .iForwardX(switches[0]), .iBackX(switches[1]), 
-                .iForwardY(switches[8]), .iBackY(switches[9]), .oXcoord(oX), .oYcoord(oY));
-
-   assign oPlot = second;
-   assign oNewFrame = frameClock;
-   assign oColour = 3'b100;
-
-
-endmodule
 
 module character(frameClock, iResetn, iForwardX, iBackX, iForwardY, iBackY, oXcoord, oYcoord);
     input frameClock, iResetn, iForwardX, iBackX, iBackY, iForwardY;
-    output wire [7:0] oXcoord;         
+    output wire [7:0] oXcoord;
     output wire [6:0] oYcoord;
 
     reg [7:0] CoordinatesX;
@@ -39,8 +13,8 @@ module character(frameClock, iResetn, iForwardX, iBackX, iForwardY, iBackY, oXco
         begin
             if(!iResetn)
                 begin
-                    CoordinatesX <= 8'd50;
-                    CoordinatesY <= 7'd50;
+                    CoordinatesX <= 8'd75;
+                    CoordinatesY <= 7'd55;
                 end
             else
                 begin
@@ -66,6 +40,57 @@ module character(frameClock, iResetn, iForwardX, iBackX, iForwardY, iBackY, oXco
     assign oXcoord = CoordinatesX;
     assign oYcoord = CoordinatesY;
 
+endmodule
+
+module darts(frameClock, 
+			iResetn, 
+			iForwardX, 
+			iBackX, 
+			iForwardY, 
+			iBackY, 
+			oYX1,
+			oYX2,
+			oYX3,
+			oYX4);
+
+    input frameClock, iResetn, iForwardX, iBackX, iBackY, iForwardY;
+    wire [7:0] oXcoord; 
+    wire [6:0] oYcoord;
+	output wire [14:0] oYX1, oYX2, oYX3, oYX4;
+	
+	wire [7:0] oX1, oX2, oX3, oX4;
+	wire [6:0] oY1, oY2, oY3, oY4;
+
+	character justin(frameClock, iResetn, iForwardX, iBackX, iForwardY, iBackY, oXcoord, oYcoord);
+
+/*	always @ (posedge frameClock)
+		begin
+			oX4 = oX3 + iForwardX - iBackX;
+			oX3 = oX2 + iForwardX - iBackX;
+			oX2 = oX1 + iForwardX - iBackX;
+			oX1 = oXcoord;
+			
+			oY4 = oY3 + iForwardY - iBackY;
+			oY3 = oY2 + iForwardY - iBackY;
+			oY2 = oY1 + iForwardY - iBackY;
+			oY1 = oYcoord;
+
+		end*/
+		
+				
+	assign oX2 = oXcoord + iForwardX - iBackX;
+	assign oX3 = oX2 + iForwardX - iBackX;
+	assign oX4 = oX3 + iForwardX - iBackX;
+	
+	assign oY2 = oYcoord + iForwardY - iBackY;
+	assign oY3 = oX2 + iForwardY - iBackY;
+	assign oY4 = oX3 + + iForwardY - iBackY;
+	
+	assign oYX1 = {oYcoord, oXcoord};
+	assign oYX2 = {oY2, oX2};
+	assign oYX3 = {oY3, oX3};
+	assign oYX4 = {oY4, oX4};
+	
 endmodule
 
 
@@ -124,6 +149,55 @@ output Enable
 	 
 endmodule
 
+module quarterSecond
+#(parameter CLOCK_FREQUENCY = 50000000) (
+input ClockIn,
+output Enable
+);
+
+    reg [30:0] RateDividerCount;
+
+    always@(posedge ClockIn)
+        begin
+            if(RateDividerCount != 31'b0)
+                begin
+                    RateDividerCount <= RateDividerCount -1;
+                end
+            
+            else 
+                begin
+                    RateDividerCount = (CLOCK_FREQUENCY / 4) - 1;
+                end
+        end
+
+    assign Enable = (RateDividerCount == 31'b0)? 1'b1: 1'b0;
+	 
+endmodule
+
+module thirdSecond
+#(parameter CLOCK_FREQUENCY = 50000000) (
+input ClockIn,
+output Enable
+);
+
+    reg [30:0] RateDividerCount;
+
+    always@(posedge ClockIn)
+        begin
+            if(RateDividerCount != 31'b0)
+                begin
+                    RateDividerCount <= RateDividerCount -1;
+                end
+            
+            else 
+                begin
+                    RateDividerCount = (CLOCK_FREQUENCY / 4) - 1;
+                end
+        end
+
+    assign Enable = (RateDividerCount == 31'b0)? 1'b1: 1'b0;
+	 
+endmodule
 
 module screen(iColour, iResetn, iClock, oX, oY, oColour, oPlot, oNewFrame, switches, xcoords, ycoords);
    input wire [2:0] iColour;
@@ -139,12 +213,9 @@ module screen(iColour, iResetn, iClock, oX, oY, oColour, oPlot, oNewFrame, switc
 	output wire [7:0] xcoords;
 	output wire [6:0] ycoords;
 
-   wire frameClock, second;
+   	wire frameClock, second, third, quarter;
 	
-	wire enable, done, wren, blackout, plot;
-	
-	wire [14:0] coords;
-	
+	wire enable, done, wren, blackout, plot;	
 	
 	
 	wire [7:0] xchar;
@@ -155,7 +226,8 @@ module screen(iColour, iResetn, iClock, oX, oY, oColour, oPlot, oNewFrame, switc
 	
 	wire [2:0] coolor;
 	
-	wire [14:0] charcoords;
+	wire [14:0] charcoords, coords,
+	d1oYX1, d1oYX2, d1oYX3, d1oYX4;
 	
 	assign xcoords = ychar;
 	assign ycoords = xchar;
@@ -165,7 +237,7 @@ module screen(iColour, iResetn, iClock, oX, oY, oColour, oPlot, oNewFrame, switc
 	always @(*)
 		begin
 			//if //(charcoords == coords) tempcolor = 4;
-			
+			// DRAW CHARACTER
 			
 				//begin
 					if(oY == ychar)
@@ -173,47 +245,50 @@ module screen(iColour, iResetn, iClock, oX, oY, oColour, oPlot, oNewFrame, switc
 							if((oX >= xchar + 1) & (oX <= xchar + 4)) tempcolor = 4;
 							else tempcolor = 7;
 						end
-					if(oY == ychar + 1)
+					else if(oY == ychar + 1)
 						begin
-							if((oX >= xchar + 1) & (oX <= xchar + 5)) tempcolor = 4;
+							if((oX >= xchar) & (oX <= xchar + 5)) tempcolor = 4;
 							else if(oX == xchar+6) tempcolor = 5;
 							else tempcolor = 7;
 						end
-					if(oY == ychar + 2)
+					else if(oY == ychar + 2)
 						begin
 							if((oX == xchar + 1) | (oX == xchar + 3)) tempcolor = 2;
 							else if((oX == xchar + 2) | (oX == xchar + 4)) tempcolor = 0;
-							else if(oX == xchar + 5) tempcolor = 5;
+							else if(oX == xchar + 6) tempcolor = 5;
 							else tempcolor = 7;
 						end
-					if(oY == ychar + 3)
+					else if(oY == ychar + 3)
 						begin
 							if((oX == xchar + 1) | (oX == xchar + 2) | (oX == xchar + 4)) tempcolor = 2;
 							else if(oX == xchar + 3) tempcolor = 4;
-							else if(oX == xchar + 5) tempcolor = 5;
+							else if(oX == xchar + 6) tempcolor = 5;
 							else tempcolor = 7;
 						end
-					if(oY == ychar + 4)
+					else if(oY == ychar + 4)
 						begin
 							if((oX >= xchar) & (oX <= xchar + 5)) tempcolor = 3;
 							else if(oX == xchar + 6) tempcolor = 5;
 							else tempcolor = 7;
 						end
-					if(oY == ychar + 5)
+					else if(oY == ychar + 5)
 						begin
 							if ((oX >= xchar + 1) & (oX <= xchar + 4)) tempcolor = 3;
 							else tempcolor = 7;
 						end
-					if(oY == ychar + 6)
+					else if(oY == ychar + 6)
 						begin
-							if ((oX >= xchar + 1) & (oX <= xchar + 4)) tempcolor = 3;
+							if ((oX >= xchar + 1) & (oX <= xchar + 4)) tempcolor = 1;
 							else tempcolor = 7;
 						end
-					if(oY == ychar + 7)
+					else if(oY == ychar + 7)
 						begin
-							if ((oX == xchar + 1) | (oX == xchar + 3)) tempcolor = 0;
+							if ((oX == xchar + 1) | (oX == xchar + 4)) tempcolor = 0;
 							else tempcolor = 7;
 						end
+					else if(coords == d1oYX1) tempcolor = 0; // put this before james
+					else if((coords == d1oYX2) || (coords == d1oYX3) || (coords == d1oYX4)) tempcolor = 2; //also this
+					// also Amanda is really pretty :D
 					else tempcolor = 7;
 				//end
 				
@@ -222,6 +297,8 @@ module screen(iColour, iResetn, iClock, oX, oY, oColour, oPlot, oNewFrame, switc
 
    RateDivider60to1 marcus(iClock, iResetn, frameClock);
    halfSecond marcus2  (iClock, second);
+   thirdSecond marcus3 (iClock, third);
+   quarterSecond marcus4(iClock, quarter);
 	
 	//STARTING TO  TEST THINGS OUT
 	screenBuffer no(iClock,
@@ -231,7 +308,7 @@ module screen(iColour, iResetn, iClock, oX, oY, oColour, oPlot, oNewFrame, switc
 							coords);
 							
 	controlRam man(iClock, 
-						second, // change into frameClock
+						frameClock, // change into frameClock
 						done,
 						//input inProgress,
 						enable,
@@ -246,8 +323,16 @@ module screen(iColour, iResetn, iClock, oX, oY, oColour, oPlot, oNewFrame, switc
 	wren,
 	oColour);
 
-   character mike(.frameClock(second), .iResetn(iResetn), .iForwardX(switches[0]), .iBackX(switches[1]), 
+   character mike(.frameClock(third), .iResetn(iResetn), .iForwardX(switches[0]), .iBackX(switches[1]), 
                 .iForwardY(switches[8]), .iBackY(switches[9]), .oXcoord(xchar), .oYcoord(ychar));
+					 
+	wire on, off;
+					 
+	assign on = 1'b1;
+	assign off = 1'b0;
+	
+	darts d1(.frameClock(quarter), .iResetn(iResetn), .iForwardX(on), .iBackX(off), 
+                .iForwardY(on), .iBackY(off), .oYX1(d1oYX1), .oYX2(d1oYX2), .oYX3(d1oYX3), .oYX4(d1oYX4));
 					 
 	assign oPlot = plot;
 					 
@@ -401,5 +486,7 @@ module screenBuffer(input iClock,
 		
 		assign coords[7:0] = x;
 		assign coords[14:8] = y;
-		
+
 endmodule
+
+
