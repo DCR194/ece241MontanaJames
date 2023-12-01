@@ -78,9 +78,9 @@ module darts(frameClock,
 		end*/
 		
 				
-	assign oX2 = oXcoord + iForwardX - iBackX;
-	assign oX3 = oX2 + iForwardX - iBackX;
-	assign oX4 = oX3 + iForwardX - iBackX;
+	assign oX2 = oXcoord - iForwardX + iBackX;
+	assign oX3 = oX2 - iForwardX + iBackX;
+	assign oX4 = oX3 - iForwardX + iBackX;
 	
 	assign oY2 = oYcoord + iForwardY - iBackY;
 	assign oY3 = oX2 + iForwardY - iBackY;
@@ -227,7 +227,14 @@ module screen(iColour, iResetn, iClock, oX, oY, oColour, oPlot, oNewFrame, switc
 	wire [2:0] coolor;
 	
 	wire [14:0] charcoords, coords,
-	d1oYX1, d1oYX2, d1oYX3, d1oYX4;
+	d1oYX1, d1oYX2, d1oYX3, d1oYX4,
+	d2oYX1, d2oYX2, d2oYX3, d2oYX4,
+	d3oYX1, d3oYX2, d3oYX3, d3oYX4,
+	d4oYX1, d4oYX2, d4oYX3, d4oYX4,
+	d5oYX1, d5oYX2, d5oYX3, d5oYX4,
+	d6oYX1, d6oYX2, d6oYX3, d6oYX4,
+	d7oYX1, d7oYX2, d7oYX3, d7oYX4,
+	d8oYX1, d8oYX2, d8oYX3, d8oYX4;
 	
 	assign xcoords = ychar;
 	assign ycoords = xchar;
@@ -240,7 +247,18 @@ module screen(iColour, iResetn, iClock, oX, oY, oColour, oPlot, oNewFrame, switc
 			// DRAW CHARACTER
 			
 				//begin
-					if(oY == ychar)
+					if(coords == d1oYX1) tempcolor = 0; // put this before james
+					else if((coords == d1oYX2) || (coords == d1oYX3) || (coords == d1oYX4)) tempcolor = 2; //also this
+					
+					else if(coords == d2oYX1) tempcolor = 0;
+					else if((coords == d2oYX2) || (coords == d2oYX3) || (coords == d2oYX4)) tempcolor = 2;
+					else if(coords == d3oYX1) tempcolor = 0;
+					else if((coords == d3oYX2) || (coords == d3oYX3) || (coords == d1oYX4)) tempcolor = 2;
+					else if(coords == d4oYX1) tempcolor = 0;
+					else if((coords == d4oYX2) || (coords == d4oYX3) || (coords == d1oYX4)) tempcolor = 2;
+
+					// also Amanda is really pretty :D
+					else if(oY == ychar)
 						begin
 							if((oX >= xchar + 1) & (oX <= xchar + 4)) tempcolor = 4;
 							else tempcolor = 7;
@@ -286,9 +304,6 @@ module screen(iColour, iResetn, iClock, oX, oY, oColour, oPlot, oNewFrame, switc
 							if ((oX == xchar + 1) | (oX == xchar + 4)) tempcolor = 0;
 							else tempcolor = 7;
 						end
-					else if(coords == d1oYX1) tempcolor = 0; // put this before james
-					else if((coords == d1oYX2) || (coords == d1oYX3) || (coords == d1oYX4)) tempcolor = 2; //also this
-					// also Amanda is really pretty :D
 					else tempcolor = 7;
 				//end
 				
@@ -333,6 +348,12 @@ module screen(iColour, iResetn, iClock, oX, oY, oColour, oPlot, oNewFrame, switc
 	
 	darts d1(.frameClock(quarter), .iResetn(iResetn), .iForwardX(on), .iBackX(off), 
                 .iForwardY(on), .iBackY(off), .oYX1(d1oYX1), .oYX2(d1oYX2), .oYX3(d1oYX3), .oYX4(d1oYX4));
+	darts d2(.frameClock(quarter), .iResetn(iResetn), .iForwardX(on), .iBackX(off), 
+                .iForwardY(off), .iBackY(on), .oYX1(d2oYX1), .oYX2(d2oYX2), .oYX3(d2oYX3), .oYX4(d2oYX4));
+	darts d3(.frameClock(quarter), .iResetn(iResetn), .iForwardX(off), .iBackX(on), 
+                .iForwardY(on), .iBackY(off), .oYX1(d3oYX1), .oYX2(d3oYX2), .oYX3(d3oYX3), .oYX4(d1oYX4));
+	darts d4(.frameClock(quarter), .iResetn(iResetn), .iForwardX(off), .iBackX(on), 
+                .iForwardY(off), .iBackY(on), .oYX1(d4oYX1), .oYX2(d4oYX2), .oYX3(d4oYX3), .oYX4(d1oYX4));
 					 
 	assign oPlot = plot;
 					 
