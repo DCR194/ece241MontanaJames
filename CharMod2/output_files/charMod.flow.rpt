@@ -1,6 +1,6 @@
 Flow report for charMod
-Tue Nov 28 20:52:06 2023
-Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+Fri Dec 01 15:04:24 2023
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
 ---------------------
@@ -37,29 +37,24 @@ refer to the applicable agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------------+
-; Flow Summary                                                                      ;
-+---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Tue Nov 28 20:50:35 2023           ;
-; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Standard Edition ;
-; Revision Name                   ; charMod                                         ;
-; Top-level Entity Name           ; fill                                            ;
-; Family                          ; Cyclone V                                       ;
-; Device                          ; 5CSEMA5F31C6                                    ;
-; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 226 / 32,070 ( < 1 % )                          ;
-; Total registers                 ; 107                                             ;
-; Total pins                      ; 68 / 457 ( 15 % )                               ;
-; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 155,904 / 4,065,280 ( 4 % )                     ;
-; Total DSP Blocks                ; 0 / 87 ( 0 % )                                  ;
-; Total HSSI RX PCSs              ; 0                                               ;
-; Total HSSI PMA RX Deserializers ; 0                                               ;
-; Total HSSI TX PCSs              ; 0                                               ;
-; Total HSSI PMA TX Serializers   ; 0                                               ;
-; Total PLLs                      ; 1 / 6 ( 17 % )                                  ;
-; Total DLLs                      ; 0 / 4 ( 0 % )                                   ;
-+---------------------------------+-------------------------------------------------+
++---------------------------------------------------------------------------+
+; Flow Summary                                                              ;
++-----------------------------+---------------------------------------------+
+; Flow Status                 ; Flow Failed - Fri Dec 01 15:04:24 2023      ;
+; Quartus Prime Version       ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Revision Name               ; charMod                                     ;
+; Top-level Entity Name       ; fill                                        ;
+; Family                      ; Cyclone V                                   ;
+; Device                      ; 5CSEMA5F31C6                                ;
+; Timing Models               ; Final                                       ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
+; Total registers             ; N/A until Partition Merge                   ;
+; Total pins                  ; N/A until Partition Merge                   ;
+; Total virtual pins          ; N/A until Partition Merge                   ;
+; Total block memory bits     ; N/A until Partition Merge                   ;
+; Total PLLs                  ; N/A until Partition Merge                   ;
+; Total DLLs                  ; N/A until Partition Merge                   ;
++-----------------------------+---------------------------------------------+
 
 
 +-----------------------------------------+
@@ -67,7 +62,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/28/2023 20:46:49 ;
+; Start date & time ; 12/01/2023 15:03:50 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; charMod             ;
 +-------------------+---------------------+
@@ -78,7 +73,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 93181000657431.170122240611392         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 198696037283610.170146102914612        ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; fill        ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; fill        ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; fill        ; Top        ;
@@ -92,33 +87,24 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:18     ; 1.0                     ; 4883 MB             ; 00:00:20                           ;
-; Fitter               ; 00:01:29     ; 1.0                     ; 6987 MB             ; 00:02:35                           ;
-; Assembler            ; 00:00:17     ; 1.0                     ; 4851 MB             ; 00:00:06                           ;
-; Timing Analyzer      ; 00:01:24     ; 1.0                     ; 5238 MB             ; 00:00:08                           ;
-; Total                ; 00:04:28     ; --                      ; --                  ; 00:03:09                           ;
+; Analysis & Synthesis ; 00:00:39     ; 1.0                     ; 4795 MB             ; 00:00:49                           ;
+; Total                ; 00:00:39     ; --                      ; --                  ; 00:00:49                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                    ;
-+----------------------+------------------+------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; BA3165WS27       ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; BA3165WS27       ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; BA3165WS27       ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; BA3165WS27       ; Windows 10 ; 10.0       ; x86_64         ;
-+----------------------+------------------+------------+------------+----------------+
++-------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                     ;
++----------------------+-------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname  ; OS Name    ; OS Version ; Processor type ;
++----------------------+-------------------+------------+------------+----------------+
+; Analysis & Synthesis ; Diego-Ciudad-Real ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+-------------------+------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off charMod -c charMod
-quartus_fit --read_settings_files=off --write_settings_files=off charMod -c charMod
-quartus_asm --read_settings_files=off --write_settings_files=off charMod -c charMod
-quartus_sta charMod -c charMod
 
 
 

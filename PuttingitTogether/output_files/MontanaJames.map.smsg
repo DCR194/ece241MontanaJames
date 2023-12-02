@@ -1,0 +1,5 @@
+Warning (10268): Verilog HDL information at screen.v(106): always construct contains both blocking and non-blocking assignments File: //VSRV1/B.Homes$/ciudadre/Desktop/PuttingitTogether/screen.v Line: 106
+Warning (10268): Verilog HDL information at screen.v(135): always construct contains both blocking and non-blocking assignments File: //VSRV1/B.Homes$/ciudadre/Desktop/PuttingitTogether/screen.v Line: 135
+Warning (10268): Verilog HDL information at screen.v(160): always construct contains both blocking and non-blocking assignments File: //VSRV1/B.Homes$/ciudadre/Desktop/PuttingitTogether/screen.v Line: 160
+Warning (10268): Verilog HDL information at screen.v(185): always construct contains both blocking and non-blocking assignments File: //VSRV1/B.Homes$/ciudadre/Desktop/PuttingitTogether/screen.v Line: 185
+Warning (10268): Verilog HDL information at screen.v(472): always construct contains both blocking and non-blocking assignments File: //VSRV1/B.Homes$/ciudadre/Desktop/PuttingitTogether/screen.v Line: 472
