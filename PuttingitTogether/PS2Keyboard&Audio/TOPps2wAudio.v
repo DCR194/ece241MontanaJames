@@ -16,7 +16,7 @@ module controlModule(
     inout AUD_DACLRCK,        // Audio DAC LR Clock
 	 input [3:0] KEY,			   // Key input
 	 output [9:0] SW,		      // Switch output
-	 output reg [4:0] LEDR     // LEDs for PS2 keys
+	 output reg [9:0] LEDR     // LEDs for PS2 keys
 );
 
     // PS2 controller instantiation

@@ -38,7 +38,7 @@ module fill
 	
 	
 	output [6:0] HEX0, HEX1;
-	output [9:0] LEDR;
+	output wire [9:0] LEDR;
 	// Do not change the following outputs
 	output			VGA_CLK;   				//	VGA Clock
 	output			VGA_HS;					//	VGA H_SYNC
@@ -68,6 +68,7 @@ module fill
 	
 	wire resetn;
 	wire [9:0] control;
+	wire [9:0] dummy;
 	assign resetn = KEY[0];
 	
 	// Create the colour, x, y and writeEn wires that are inputs to the controller.
@@ -117,8 +118,8 @@ module fill
     AUD_ADCLRCK,        // Audio ADC LR Clock
     AUD_DACLRCK,        // Audio DAC LR Clock
 	 KEY,			   // Key input
-	 SW,		      // Switch output
-	 LEDR[4:0]     // LEDs for PS2 keys
+	 dummy,		      // Switch output
+	 LEDR     // LEDs for PS2 keys
 );
 			
 	// Put your code here. Your code should produce signals x,y,colour and writeEn
@@ -127,7 +128,7 @@ module fill
 	assign control[0] = LEDR[2];
 	assign control[1] = LEDR[3];
 	assign control[8] = LEDR[1];
-	assign control[9] = LEDR[4];
+	assign control[9] = LEDR[0];
 	// assign LEDR = SW;
 	screen poop(.iResetn(resetn), .iClock(CLOCK_50), .oX(x), 
 	.oY(y), .oColour(colour), .oPlot(writeEn), .switches(control), .xcoords(xcoords), .ycoords(ycoords));
