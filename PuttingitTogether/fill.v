@@ -66,7 +66,7 @@ module fill
 	 //output reg [4:0] LEDR  
 	//
 	
-	wire resetn;
+	wire resetn, collide;
 	wire [9:0] control;
 	wire [9:0] dummy;
 	assign resetn = KEY[0];
@@ -131,7 +131,8 @@ module fill
 	assign control[9] = LEDR[0];
 	// assign LEDR = SW;
 	screen poop(.iResetn(resetn), .iClock(CLOCK_50), .oX(x), 
-	.oY(y), .oColour(colour), .oPlot(writeEn), .switches(control), .xcoords(xcoords), .ycoords(ycoords));
+	.oY(y), .oColour(colour), .oPlot(writeEn), .switches(control), 
+	.xcoords(xcoords), .ycoords(ycoords), .collide(collide));
 	// for the VGA controller, in addition to any other functionality your design may require.
 	
 	
