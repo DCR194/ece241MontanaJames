@@ -80,7 +80,7 @@ module fill
 	wire [7:0] xcoords;
 	wire [6:0] ycoords;
 	wire writeEn;
-	reg notHit;
+	reg notHit, win, lose;
 
 	// Create an Instance of a VGA controller - there can be only one!
 	// Define the number of colours as well as the initial background
@@ -129,8 +129,22 @@ module fill
 	
 	always @ (posedge CLOCK_50)
 	begin
-		if(!KEY[0]) notHit = 1;
-		else if(collide || countstop) notHit = 0;		
+		if(!KEY[0]) begin 
+			notHit = 1;
+			win = 0;
+			lose = 0;
+		end
+		else if(collide || countstop)begin 
+			notHit = 0;
+		end
+		if(collide) begin
+			win = 0;
+			lose = 1;
+		end
+		else if(countstop) begin
+			win = 1;
+			lose = 0;
+		end
 	end
 	
 	//assign HEX0 = xcoords[6:0];
@@ -141,6 +155,8 @@ module fill
 	assign control[9] = LEDRF[0];
 	assign LEDR[1] = notHit;
 	assign LEDR[0] = collide;
+	assign LEDR[9] = win;
+	assign LEDR[8] = lose;
 	// assign LEDR = SW;
 	screen poop(.iResetn(resetn), .iClock(CLOCK_50 & notHit), .oX(x), 
 	.oY(y), .oColour(colour), .oPlot(writeEn), .switches(control), 
